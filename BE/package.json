@@ -7,7 +7,9 @@
     "start": "ts-node index.ts",
     "dev": "nodemon index.ts",
     "tsc": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:ui": "rm -rf build && cd ../FE && npm run build && cp -r build ../BE",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
   },
   "author": "hieunm",
   "license": "ISC",

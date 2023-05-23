@@ -15,6 +15,9 @@ const app = express();
 // init cors middleware to allow cross origin request
 app.use(cors());
 
+// make express show static content from build folder
+app.use(express.static('build'))
+
 // init morgan middleware to log request
 app.use(morganPractice);
 
